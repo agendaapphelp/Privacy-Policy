@@ -441,13 +441,14 @@ a{color:var(--accent)}
 html[lang="ru"] .sp-t { font-size: 11px; letter-spacing: .03em; margin-right: -.03em; text-transform: none; }
 .splash { position: fixed; inset: 0; z-index: 10000; display: grid; place-items: center; background: var(--bg); transition: opacity .35s ease; }
 .splash.out { opacity: 0; pointer-events: none; }
+.splash { background-image: inherit; background-size: inherit; }
 .sp-book { position: relative; width: 132px; height: 176px; perspective: 900px; animation: spIn .55s ease-out both, spShift .9s .6s cubic-bezier(.6, .05, .25, 1) forwards; }
 .sp-pages { position: absolute; inset: 3px 2px 3px 0; border-radius: 3px 8px 8px 3px; background: var(--card) repeating-linear-gradient(var(--card) 0 15px, var(--line) 15px 16px); box-shadow: 3px 2px 0 var(--card-2), 5px 4px 0 var(--line); }
 .sp-rib { position: absolute; right: 22px; top: 0; bottom: -14px; width: 7px; background: var(--accent); clip-path: polygon(0 0, 100% 0, 100% 100%, 50% calc(100% - 7px), 0 100%); }
 .sp-cover { position: absolute; inset: 0; transform-style: preserve-3d; transform-origin: left center; animation: spOpen .9s .6s cubic-bezier(.6, .05, .25, 1) forwards; }
 .sp-f, .sp-b { position: absolute; inset: 0; backface-visibility: hidden; -webkit-backface-visibility: hidden; border-radius: 3px 9px 9px 3px; }
 .sp-f { background: var(--accent); box-shadow: inset 7px 0 0 rgba(0, 0, 0, .14), 0 6px 18px rgba(0, 0, 0, .22); }
-.sp-b { background: var(--card-2); transform: rotateY(180deg); box-shadow: inset -7px 0 0 rgba(0, 0, 0, .08); }
+.sp-b { background-color: var(--bg); background-image: linear-gradient(var(--card-2), var(--card-2)); transform: rotateY(180deg); box-shadow: inset -7px 0 0 rgba(0, 0, 0, .08); }
 .sp-lab { position: absolute; left: 22px; right: 32px; top: 42px; display: grid; justify-items: center; gap: 8px; color: var(--accent-ink); font-family: var(--f-display); text-align: center; }
 .sp-t { font-size: 14px; font-weight: 600; letter-spacing: .1em; margin-right: -.1em; text-transform: uppercase; line-height: 1.1; padding-bottom: 8px; border-bottom: 1px solid currentColor; width: 100%; white-space: nowrap; }
 html[lang^="zh"] .sp-t { font-size: 19px; letter-spacing: .14em; margin-right: -.14em; }
